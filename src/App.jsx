@@ -14,7 +14,7 @@ export default function FaceSketchGenerator() {
       const basePrompt = `${prompt}, pencil sketch style, highly detailed, black and white, realistic shading, cross-hatching, hand-drawn, artistic, portrait, face-focused, expressive`;
       const finalPrompt = isModification ? `${basePrompt}, ${modification}` : basePrompt;
       
-      const response = await fetch("https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2", {
+      const response = await fetch("https://router.huggingface.co/hf-inference/models/stable-diffusion-v1-5/stable-diffusion-v1-5", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${import.meta.env.VITE_HF_API_KEY}`,
